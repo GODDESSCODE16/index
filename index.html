@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: pink;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Ensure the body takes up the full viewport height */
+            margin: 0; /* Remove any default margin */
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .yes {
+            background-color: green;
+            color: white;
+        }
+
+        .no {
+            background-color: red;
+            color: white;
+        }
+
+        #valentineImage {
+            display: none;
+            width: 300px;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px; /* Optional for spacing */
+        }
+
+        #message {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Will you be my Valentine? ❤️</h1>
+        <button class="yes" onclick="showImage()">Yes</button>
+        <button class="no" onclick="showMessage()">No</button>
+        <br>
+        <img id="valentineImage" src="https://i.imgur.com/8nTmwje.jpeg" alt="I LOVE YOU DADDY ❤️<3">
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function showImage() {
+            document.getElementById("valentineImage").style.display = "block";
+            document.getElementById("message").innerText = "";
+        }
+
+        function showMessage() {
+            document.getElementById("message").innerText = "Don't fool!";
+            document.getElementById("valentineImage").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
